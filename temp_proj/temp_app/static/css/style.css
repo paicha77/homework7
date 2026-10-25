@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans Georgian', sans-serif;
+    background: #0b1020;
+    color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #11182b;
+    border-bottom: 1px solid #25304a;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #8b9cff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8b9cff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 25px;
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid #39476c;
+    background: #171f39;
+    color: #a5b4fc;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+h1 span {
+    color: #8b9cff;
+}
+
+.subtitle {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: #9ca9bf;
+    line-height: 1.9;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 35px 0;
+}
+
+.info-card,
+.hobby-card,
+.grade-card {
+    background: #141d32;
+    border: 1px solid #293653;
+    border-radius: 18px;
+    padding: 28px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.info-card:hover,
+.hobby-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b9cff;
+}
+
+.icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    color: #9ca9bf;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    font-size: 20px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 25px;
+    background: #788bff;
+    color: #080d1b;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #a5b4fc;
+    transform: translateY(-2px);
+}
+
+.hobbies-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 35px 0;
+}
+
+.hobby-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.hobby-card p {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+}
+
+.hobby-icon {
+    font-size: 25px;
+    color: #8b9cff;
+}
+
+.grade-card {
+    max-width: 500px;
+    margin: 35px auto;
+}
+
+.grade-card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.status {
+    color: #a5b4fc;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #77849d;
+    background: #11182b;
+    border-top: 1px solid #25304a;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .info-grid,
+    .hobbies-list {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 45px 18px;
+    }
+}

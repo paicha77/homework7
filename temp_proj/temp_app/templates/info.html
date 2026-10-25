@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="badge">WELCOME TO MY WEBSITE</span>
+
+        <h1>გამარჯობა! მე ვარ <span>{{ name }}</span></h1>
+
+        <p class="subtitle">
+            კეთილი იყოს თქვენი მობრძანება ჩემს პირად ვებსაიტზე.
+            აქ შეგიძლიათ გაიგოთ მეტი ჩემს შესახებ.
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <div class="icon"></div>
+                <h3>სახელი და გვარი</h3>
+                <p>{{ name }} {{ surname }}</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon"></div>
+                <h3>ასაკი</h3>
+                <p>{{ age }} წლის</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon"></div>
+                <h3>სიმაღლე</h3>
+                <p>{{ height }} სმ</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon"></div>
+                <h3>ქალაქი</h3>
+                <p>{{ city }}</p>
+            </div>
+
+        </div>
+
+        <a href="{% url 'hobbies' %}" class="button">
+            გაიცანი ჩემი ჰობები →
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

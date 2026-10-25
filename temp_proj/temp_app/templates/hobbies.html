@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}My Hobbies{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <span class="badge">WHAT I LOVE TO DO</span>
+
+    <h1>ჩემი <span>ჰობები</span> </h1>
+
+    <p class="subtitle">
+        თავისუფალ დროს მიყვარს სხვადასხვა საინტერესო საქმის კეთება.
+    </p>
+
+    <div class="hobbies-list">
+
+        {% for hobby in hobbies %}
+            <div class="hobby-card">
+                <span class="hobby-icon">✦</span>
+                <p>{{ hobby }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="grade-card">
+
+        <h2>ჩემი კლასი: {{ grade }}</h2>
+
+        {% if grade == 12 %}
+            <p class="status">🎓 აბიტურიენტი</p>
+        {% else %}
+            <p class="status"> მომავალი აბიტურიენტი</p>
+        {% endif %}
+
+    </div>
+
+    <a href="{% url 'info' %}" class="button">
+        ← უკან დაბრუნება
+    </a>
+
+</section>
+
+{% endblock %}
